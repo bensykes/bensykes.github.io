@@ -1,12 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Improving Developer Workflow</title>
+
 <style>
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   display: flex;
   color: #111;
+  background: #fff;
 }
 
-/* Sidebar (same as homepage) */
+/* Sidebar */
 .sidebar {
   width: 220px;
   padding: 40px 20px;
@@ -17,8 +25,10 @@ body {
 .sidebar h4 {
   margin-top: 30px;
   margin-bottom: 10px;
-  font-size: 13px;
-  color: #888;
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .sidebar a {
@@ -28,50 +38,87 @@ body {
   text-decoration: none;
 }
 
-/* Main content */
+.sidebar a:hover {
+  color: #000;
+}
+
+/* Main */
 .main {
   flex: 1;
-  padding: 60px 80px;
+  padding: 120px 80px 80px 80px;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 760px;
 }
 
+/* Typography */
 h1 {
+  font-size: 32px;
   margin-bottom: 10px;
 }
 
 .meta {
   color: #777;
   font-size: 14px;
-  margin-bottom: 30px;
-}
-
-.section {
-  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .label {
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: #999;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #aaa;
+  text-transform: uppercase;
   margin-bottom: 10px;
 }
 
+.section {
+  margin-top: 80px;
+}
+
+p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: #eee;
+  margin: 40px 0;
+}
+
+/* Image card */
 .image {
   margin-top: 30px;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
+  border: 1px solid #eee;
+  background: #fafafa;
+  padding: 40px;
 }
 
 img {
   width: 100%;
+  border-radius: 8px;
+}
+
+/* Back link */
+.back {
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back:hover {
+  color: #000;
 }
 </style>
+</head>
 
 <body>
 
+<!-- Sidebar -->
 <div class="sidebar">
   <h4>Featured Work</h4>
   <a href="project1.html">Developer Workflow</a>
@@ -82,17 +129,60 @@ img {
   <a href="#">Resume</a>
 </div>
 
+<!-- Main Content -->
 <div class="main">
   <div class="container">
 
-    <a href="index.html">← Back</a>
+    <a href="index.html" class="back">← Back</a>
 
     <h1>Improving Developer Workflow</h1>
-    <div class="meta">UX Director · Silicon Labs · 2025</div>
 
-    <!-- rest of your content -->
+    <div class="meta">
+      UX Director · Silicon Labs · 2025
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Hero Image -->
+    <div class="image">
+      <img src="https://picsum.photos/900/400" />
+    </div>
+
+    <!-- Problem -->
+    <div class="section">
+      <div class="label">Problem</div>
+      <p>
+        Developers working across Simplicity Studio and VS Code experienced fragmented workflows, requiring constant context switching and slowing down development tasks.
+      </p>
+    </div>
+
+    <!-- Approach -->
+    <div class="section">
+      <div class="label">Approach</div>
+      <p>
+        I conducted interviews with FAEs to identify workflow bottlenecks, then designed a unified interaction model that reduced fragmentation and clarified task flow across tools.
+      </p>
+    </div>
+
+    <!-- Impact -->
+    <div class="section">
+      <div class="label">Impact</div>
+      <p>
+        Improved task clarity and reduced friction across core workflows, enabling faster onboarding and more efficient debugging for developers.
+      </p>
+    </div>
+
+    <!-- Visual Section -->
+    <div class="section">
+      <div class="label">Mobile Flow</div>
+
+      <div class="image">
+        <img src="https://picsum.photos/900/500" />
+      </div>
+    </div>
 
   </div>
 </div>
 
 </body>
+</html>
