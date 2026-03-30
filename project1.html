@@ -9,7 +9,7 @@
 /* RESET */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
   color: #111;
   background: #fff;
 }
@@ -21,43 +21,50 @@ body {
 
 /* SIDEBAR */
 .sidebar {
-  width: 240px;
-  padding: 50px 30px;
+  width: 260px;
+  padding: 60px 40px;
   border-right: 1px solid #eee;
   font-size: 14px;
 }
 
 .sidebar h4 {
   font-size: 11px;
-  color: #999;
+  color: #aaa;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin: 30px 0 10px;
+  margin-top: 40px;
+  margin-bottom: 16px;
 }
 
 .sidebar a {
   display: block;
-  margin: 8px 0;
-  color: #666;
+  margin: 10px 0;
+  color: #777;
   text-decoration: none;
+  font-weight: 400;
 }
 
 .sidebar a:hover {
   color: #000;
 }
 
-/* MAIN GRID (KEY FIX) */
+.sidebar a.active {
+  color: #111;
+  font-weight: 500;
+}
+
+/* MAIN GRID */
 .main {
   flex: 1;
   display: grid;
   grid-template-columns: 140px 1fr;
-  padding: 120px 120px;
+  padding: 140px 120px;
 }
 
-/* LEFT GUTTER */
+/* GUTTER */
 .gutter {}
 
-/* CONTENT AREA */
+/* CONTENT */
 .content {
   max-width: 1000px;
 }
@@ -136,13 +143,18 @@ p {
 
   <!-- SIDEBAR -->
   <div class="sidebar">
+
     <h4>Featured Work</h4>
-    <a href="project1.html">Developer Workflow</a>
+    <a href="project1.html" class="active">Developer Workflow</a>
+    <a href="#">Splash Technologies</a>
+    <a href="#">GameGether</a>
+    <a href="#">TypeRace</a>
 
     <h4>Connect</h4>
     <a href="#">LinkedIn</a>
     <a href="#">Email</a>
     <a href="#">Resume</a>
+
   </div>
 
   <!-- MAIN -->
