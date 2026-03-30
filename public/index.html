@@ -395,7 +395,7 @@ Features: Real-Time WPM, Accuracy Tracking, Daily Challenges, Visual Feedback.
     function showTyping() {
       const d = document.createElement('div');
       d.className = 'chat-msg'; d.id = 'typing';
-      d.innerHTML = '<div class="chat-msg-label ai">Jeremy\'s AI</div><div class="chat-typing"><span></span><span></span><span></span></div>';
+      d.innerHTML = '<div class="chat-msg-label ai">Ben\'s AI</div><div class="chat-typing"><span></span><span></span><span></span></div>';
       chatMessages.appendChild(d);
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
@@ -430,12 +430,12 @@ Features: Real-Time WPM, Accuracy Tracking, Daily Challenges, Visual Feedback.
           history.push({ role: 'assistant', content: reply });
           addMsg('assistant', reply);
         } else {
-          addMsg('assistant', "Sorry, I'm having trouble right now. Reach Jeremy at jeremyrandall408@gmail.com.");
+          addMsg('assistant', "Sorry, I'm having trouble right now. Reach Ben at ben.sykes@gmail.com.");
           if (data.error) console.error('API:', data.error);
         }
       } catch (err) {
         hideTyping();
-        addMsg('assistant', "Sorry, I'm having trouble connecting. Reach Jeremy at jeremyrandall408@gmail.com.");
+        addMsg('assistant', "Sorry, I'm having trouble connecting. Reach Ben at ben.sykes@gmail.com.");
         console.error(err);
       }
 
