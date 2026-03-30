@@ -6,15 +6,20 @@
 <title>Improving Developer Workflow</title>
 
 <style>
+/* RESET */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  display: flex;
   color: #111;
   background: #fff;
 }
 
-/* Sidebar */
+/* LAYOUT */
+.page {
+  display: flex;
+}
+
+/* SIDEBAR */
 .sidebar {
   width: 240px;
   padding: 50px 30px;
@@ -23,12 +28,11 @@ body {
 }
 
 .sidebar h4 {
-  margin-top: 30px;
-  margin-bottom: 10px;
   font-size: 11px;
   color: #999;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  margin: 30px 0 10px;
 }
 
 .sidebar a {
@@ -42,49 +46,55 @@ body {
   color: #000;
 }
 
-/* Main */
+/* MAIN GRID (KEY FIX) */
 .main {
   flex: 1;
-  padding: 140px 120px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  padding: 120px 120px;
 }
 
-.container {
-  max-width: 880px;
+/* LEFT GUTTER */
+.gutter {}
+
+/* CONTENT AREA */
+.content {
+  max-width: 1000px;
 }
 
-/* Typography */
+/* TYPOGRAPHY */
 h1 {
-  font-size: 34px;
+  font-size: 36px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin: 10px 0 8px;
 }
 
 .meta {
-  color: #888;
   font-size: 13px;
+  color: #888;
   margin-bottom: 40px;
 }
 
 .back {
+  font-size: 13px;
   color: #888;
   text-decoration: none;
-  font-size: 13px;
 }
 
 .back:hover {
   color: #000;
 }
 
-/* Divider */
+/* DIVIDER */
 .divider {
   height: 1px;
   background: #eee;
   margin: 40px 0;
 }
 
-/* Sections */
+/* SECTIONS */
 .section {
-  margin-top: 90px;
+  margin-top: 100px;
 }
 
 .label {
@@ -97,94 +107,103 @@ h1 {
 
 p {
   font-size: 15px;
-  color: #333;
   line-height: 1.7;
+  color: #333;
   max-width: 720px;
 }
 
-/* Image card */
+/* IMAGE CARD */
 .image {
   margin-top: 30px;
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid #eee;
   background: #fafafa;
-  padding: 30px;
+  padding: 20px;
 }
 
-img {
+.image img {
   width: 100%;
   border-radius: 12px;
+  display: block;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Sidebar -->
-<div class="sidebar">
-  <h4>Featured Work</h4>
-  <a href="project1.html">Developer Workflow</a>
+<div class="page">
 
-  <h4>Connect</h4>
-  <a href="#">LinkedIn</a>
-  <a href="#">Email</a>
-  <a href="#">Resume</a>
-</div>
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h4>Featured Work</h4>
+    <a href="project1.html">Developer Workflow</a>
 
-<!-- Main -->
-<div class="main">
-  <div class="container">
+    <h4>Connect</h4>
+    <a href="#">LinkedIn</a>
+    <a href="#">Email</a>
+    <a href="#">Resume</a>
+  </div>
 
-    <a href="index.html" class="back">← Back</a>
+  <!-- MAIN -->
+  <div class="main">
 
-    <h1>Improving Developer Workflow</h1>
-    <div class="meta">UX Director · Silicon Labs · 2025</div>
+    <div class="gutter"></div>
 
-    <div class="divider"></div>
+    <div class="content">
 
-    <!-- Hero -->
-    <div class="image">
-      <img src="https://picsum.photos/1200/500">
-    </div>
+      <a href="index.html" class="back">← Back</a>
 
-    <!-- Problem -->
-    <div class="section">
-      <div class="label">Problem</div>
-      <p>
-        Developers working across Simplicity Studio and VS Code experienced fragmented workflows,
-        requiring constant context switching and slowing down development tasks.
-      </p>
-    </div>
+      <h1>Improving Developer Workflow</h1>
+      <div class="meta">UX Director · Silicon Labs · 2025</div>
 
-    <!-- Approach -->
-    <div class="section">
-      <div class="label">Approach</div>
-      <p>
-        I conducted interviews with FAEs to identify workflow bottlenecks, then designed a unified
-        interaction model that reduced fragmentation and clarified task flow across tools.
-      </p>
-    </div>
+      <div class="divider"></div>
 
-    <!-- Impact -->
-    <div class="section">
-      <div class="label">Impact</div>
-      <p>
-        Improved task clarity and reduced friction across core workflows, enabling faster onboarding
-        and more efficient debugging for developers.
-      </p>
-    </div>
-
-    <!-- Mobile -->
-    <div class="section">
-      <div class="label">Mobile Flow</div>
-
+      <!-- HERO IMAGE -->
       <div class="image">
-        <img src="https://picsum.photos/1200/600">
+        <img src="https://picsum.photos/1400/500">
       </div>
+
+      <!-- PROBLEM -->
+      <div class="section">
+        <div class="label">Problem</div>
+        <p>
+          Developers working across Simplicity Studio and VS Code experienced fragmented workflows,
+          requiring constant context switching and slowing down development tasks.
+        </p>
+      </div>
+
+      <!-- APPROACH -->
+      <div class="section">
+        <div class="label">Approach</div>
+        <p>
+          I conducted interviews with FAEs to identify workflow bottlenecks, then designed a unified
+          interaction model that reduced fragmentation and clarified task flow across tools.
+        </p>
+      </div>
+
+      <!-- IMPACT -->
+      <div class="section">
+        <div class="label">Impact</div>
+        <p>
+          Improved task clarity and reduced friction across core workflows, enabling faster onboarding
+          and more efficient debugging for developers.
+        </p>
+      </div>
+
+      <!-- MOBILE FLOW -->
+      <div class="section">
+        <div class="label">Mobile Flow</div>
+
+        <div class="image">
+          <img src="https://picsum.photos/1400/600">
+        </div>
+      </div>
+
     </div>
 
   </div>
+
 </div>
 
 </body>
