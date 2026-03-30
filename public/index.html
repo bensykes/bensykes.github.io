@@ -125,8 +125,8 @@
     <a class="sidebar-link" data-target="gamegether">GameGether</a>
     <a class="sidebar-link" data-target="typerace">TypeRace</a>
     <span class="sidebar-label">Connect</span>
-    <a class="sidebar-link" href="https://linkedin.com" target="_blank">LinkedIn</a>
-    <a class="sidebar-link" href="/cdn-cgi/l/email-protection#1b717e697e7662697a757f7a77772f2b235b7c767a727735787476">Email</a>
+    <a class="sidebar-link" href="https://linkedin.com/in/bsykes" target="_blank">LinkedIn</a>
+    <a class="sidebar-link" href="mailto:ben.sykes@gmail.com">Email</a>
     <a class="sidebar-link" href="#">Resume</a>
   </nav>
 
@@ -152,10 +152,13 @@
       </div>
 
       <div class="quick-links">
-        <button class="pill" data-target="splash-technologies">Splash Technologies</button>
-        <button class="pill" data-target="gamegether">GameGether</button>
-        <button class="pill" data-target="typerace">TypeRace</button>
-        <button class="pill" onclick="window.open('https://linkedin.com','_blank')">LinkedIn</button>
+        <button class="pill" data-query="Tell me about Ben's military experience">Military Experience</button>
+        <button class="pill" data-query="What was Ben's film career like?">Film Career</button>
+        <button class="pill" data-query="Tell me about Ben's culinary background">Culinary Career</button>
+        <button class="pill" data-query="Tell me about the Splash Technologies project">Splash Technologies</button>
+        <button class="pill" data-query="Tell me about the GameGether project">GameGether</button>
+        <button class="pill" data-query="Tell me about the TypeRace project">TypeRace</button>
+        <button class="pill" onclick="window.open('https://linkedin.com/in/bsykes','_blank')">LinkedIn</button>
         <button class="pill" onclick="location.href='mailto:ben.sykes@gmail.com'">Email</button>
         <button class="pill">Resume</button>
       </div>
@@ -163,8 +166,8 @@
       <div class="home-footer">
         <span>&copy; 2026 Ben Sykes</span>
         <div class="home-footer-right">
-          <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="167c7364737b6f64777872777a7a22262e56717b777f7a3875797b">[email&#160;protected]</a></span>
-          <a href="https://linkedin.com" target="_blank">LinkedIn ↗</a>
+          <span>ben.sykes@gmail.com</span>
+          <a href="https://linkedin.com/in/bsykes" target="_blank">LinkedIn ↗</a>
         </div>
       </div>
     </div>
@@ -235,7 +238,7 @@
 
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     /* ═══════════════════════════════════════════════════════════
        KNOWLEDGE BASE — Add or edit data here to expand the AI
        ═══════════════════════════════════════════════════════════ */
@@ -256,6 +259,7 @@ Key external links:
 - LinkedIn: https://linkedin.com/in/bsykes
 - IMDB: https://imdb.com/name/nm0003777
 - Twitter: https://twitter.com/bensykes
+
 === BIO ===
 Name: Ben Sykes
 Current Role: Product Designer | Product Design Leader
@@ -335,6 +339,7 @@ Features: Real-Time WPM, Accuracy Tracking, Daily Challenges, Visual Feedback.
 
 === ADDITIONAL CONTEXT (add more here) ===
 `;
+
     /* ═══════════════════════════════════════
        PAGE NAVIGATION
        ═══════════════════════════════════════ */
@@ -355,9 +360,6 @@ Features: Real-Time WPM, Accuracy Tracking, Daily Challenges, Visual Feedback.
 
     document.querySelectorAll('[data-target]').forEach(el => {
       el.addEventListener('click', e => { e.preventDefault(); if (el.dataset.target) showPage(el.dataset.target); });
-    });
-    document.querySelectorAll('.pill[data-target]').forEach(el => {
-      el.addEventListener('click', () => { if (el.dataset.target) showPage(el.dataset.target); });
     });
 
     /* ═══════════════════════════════════════
@@ -442,6 +444,11 @@ Features: Real-Time WPM, Accuracy Tracking, Daily Challenges, Visual Feedback.
       loading = false;
       chatSend.classList.remove('active-send');
     }
+
+    /* Query pills — click to send pre-written questions */
+    document.querySelectorAll('.pill[data-query]').forEach(el => {
+      el.addEventListener('click', () => { chatInput.value = el.dataset.query; send(); });
+    });
 
     chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); send(); } });
     chatSend.addEventListener('click', send);
