@@ -16,8 +16,8 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 220px;
-  padding: 40px 20px;
+  width: 240px;
+  padding: 50px 30px;
   border-right: 1px solid #eee;
   font-size: 14px;
 }
@@ -25,16 +25,16 @@ body {
 .sidebar h4 {
   margin-top: 30px;
   margin-bottom: 10px;
-  font-size: 12px;
+  font-size: 11px;
   color: #999;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 .sidebar a {
   display: block;
-  margin: 6px 0;
-  color: #555;
+  margin: 8px 0;
+  color: #666;
   text-decoration: none;
 }
 
@@ -45,40 +45,34 @@ body {
 /* Main */
 .main {
   flex: 1;
-  padding: 120px 80px 80px 80px;
+  padding: 140px 120px;
 }
 
 .container {
-  max-width: 760px;
+  max-width: 880px;
 }
 
 /* Typography */
 h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .meta {
-  color: #777;
-  font-size: 14px;
+  color: #888;
+  font-size: 13px;
   margin-bottom: 40px;
 }
 
-.label {
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  color: #aaa;
-  text-transform: uppercase;
-  margin-bottom: 10px;
+.back {
+  color: #888;
+  text-decoration: none;
+  font-size: 13px;
 }
 
-.section {
-  margin-top: 80px;
-}
-
-p {
-  color: #333;
-  line-height: 1.6;
+.back:hover {
+  color: #000;
 }
 
 /* Divider */
@@ -88,30 +82,39 @@ p {
   margin: 40px 0;
 }
 
+/* Sections */
+.section {
+  margin-top: 90px;
+}
+
+.label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #bbb;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.7;
+  max-width: 720px;
+}
+
 /* Image card */
 .image {
   margin-top: 30px;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   border: 1px solid #eee;
   background: #fafafa;
-  padding: 40px;
+  padding: 30px;
 }
 
 img {
   width: 100%;
-  border-radius: 8px;
-}
-
-/* Back link */
-.back {
-  color: #666;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.back:hover {
-  color: #000;
+  border-radius: 12px;
 }
 </style>
 </head>
@@ -129,30 +132,28 @@ img {
   <a href="#">Resume</a>
 </div>
 
-<!-- Main Content -->
+<!-- Main -->
 <div class="main">
   <div class="container">
 
     <a href="index.html" class="back">← Back</a>
 
     <h1>Improving Developer Workflow</h1>
-
-    <div class="meta">
-      UX Director · Silicon Labs · 2025
-    </div>
+    <div class="meta">UX Director · Silicon Labs · 2025</div>
 
     <div class="divider"></div>
 
-    <!-- Hero Image -->
+    <!-- Hero -->
     <div class="image">
-      <img src="https://picsum.photos/900/400" />
+      <img src="https://picsum.photos/1200/500">
     </div>
 
     <!-- Problem -->
     <div class="section">
       <div class="label">Problem</div>
       <p>
-        Developers working across Simplicity Studio and VS Code experienced fragmented workflows, requiring constant context switching and slowing down development tasks.
+        Developers working across Simplicity Studio and VS Code experienced fragmented workflows,
+        requiring constant context switching and slowing down development tasks.
       </p>
     </div>
 
@@ -160,7 +161,8 @@ img {
     <div class="section">
       <div class="label">Approach</div>
       <p>
-        I conducted interviews with FAEs to identify workflow bottlenecks, then designed a unified interaction model that reduced fragmentation and clarified task flow across tools.
+        I conducted interviews with FAEs to identify workflow bottlenecks, then designed a unified
+        interaction model that reduced fragmentation and clarified task flow across tools.
       </p>
     </div>
 
@@ -168,16 +170,17 @@ img {
     <div class="section">
       <div class="label">Impact</div>
       <p>
-        Improved task clarity and reduced friction across core workflows, enabling faster onboarding and more efficient debugging for developers.
+        Improved task clarity and reduced friction across core workflows, enabling faster onboarding
+        and more efficient debugging for developers.
       </p>
     </div>
 
-    <!-- Visual Section -->
+    <!-- Mobile -->
     <div class="section">
       <div class="label">Mobile Flow</div>
 
       <div class="image">
-        <img src="https://picsum.photos/900/500" />
+        <img src="https://picsum.photos/1200/600">
       </div>
     </div>
 
