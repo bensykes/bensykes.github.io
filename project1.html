@@ -1,32 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Developer Workflow</title>
-
 <style>
 body {
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 0 20px;
-  line-height: 1.6;
+  display: flex;
   color: #111;
 }
 
-.meta {
-  color: #777;
+/* Sidebar (same as homepage) */
+.sidebar {
+  width: 220px;
+  padding: 40px 20px;
+  border-right: 1px solid #eee;
   font-size: 14px;
-  margin-bottom: 20px;
+}
+
+.sidebar h4 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #888;
+}
+
+.sidebar a {
+  display: block;
+  margin: 6px 0;
+  color: #555;
+  text-decoration: none;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 60px 80px;
+}
+
+.container {
+  max-width: 900px;
 }
 
 h1 {
   margin-bottom: 10px;
 }
 
+.meta {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
 .section {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .label {
@@ -46,49 +69,3 @@ img {
   width: 100%;
 }
 </style>
-</head>
-
-<body>
-
-<a href="index.html">← Back</a>
-
-<h1>Improving Developer Workflow</h1>
-
-<div class="meta">
-UX Director · Silicon Labs · 2025
-</div>
-
-<div class="image">
-  <img src="https://via.placeholder.com/800x400" />
-</div>
-
-<div class="section">
-  <div class="label">PROBLEM</div>
-  <p>
-    Developers working across Simplicity Studio and VS Code experienced fragmented workflows, requiring constant context switching and slowing down development tasks.
-  </p>
-</div>
-
-<div class="section">
-  <div class="label">APPROACH</div>
-  <p>
-    I conducted interviews with FAEs to identify workflow bottlenecks, then designed a unified interaction model that reduced fragmentation and clarified task flow across tools.
-  </p>
-</div>
-
-<div class="section">
-  <div class="label">IMPACT</div>
-  <p>
-    Improved task clarity and reduced friction across core workflows, enabling faster onboarding and more efficient debugging for developers.
-  </p>
-</div>
-
-<div class="section">
-  <div class="label">MOBILE FLOW</div>
-  <div class="image">
-    <img src="https://via.placeholder.com/800x500" />
-  </div>
-</div>
-
-</body>
-</html>
