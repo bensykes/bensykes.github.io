@@ -126,7 +126,7 @@
     <a class="sidebar-link" data-target="typerace">TypeRace</a>
     <span class="sidebar-label">Connect</span>
     <a class="sidebar-link" href="https://linkedin.com" target="_blank">LinkedIn</a>
-    <a class="sidebar-link" href="mailto:jeremyrandall408@gmail.com">Email</a>
+    <a class="sidebar-link" href="/cdn-cgi/l/email-protection#1b717e697e7662697a757f7a77772f2b235b7c767a727735787476">Email</a>
     <a class="sidebar-link" href="#">Resume</a>
   </nav>
 
@@ -163,7 +163,7 @@
       <div class="home-footer">
         <span>&copy; 2026 Jeremy Randall</span>
         <div class="home-footer-right">
-          <span>jeremyrandall408@gmail.com</span>
+          <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="167c7364737b6f64777872777a7a22262e56717b777f7a3875797b">[email&#160;protected]</a></span>
           <a href="https://linkedin.com" target="_blank">LinkedIn ↗</a>
         </div>
       </div>
@@ -235,7 +235,7 @@
 
   </div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     /* ═══════════════════════════════════════════════════════════
        KNOWLEDGE BASE — Add or edit data here to expand the AI
        ═══════════════════════════════════════════════════════════ */
@@ -353,12 +353,10 @@ Features: Real-Time WPM, Accuracy Tracking, Daily Challenges, Visual Feedback.
       showTyping();
 
       try {
-        const res = await fetch('https://api.anthropic.com/v1/messages', {
+        const res = await fetch('/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            model: 'claude-sonnet-4-20250514',
-            max_tokens: 1000,
             system: KNOWLEDGE_BASE,
             messages: history
           })
@@ -384,12 +382,4 @@ Features: Real-Time WPM, Accuracy Tracking, Daily Challenges, Visual Feedback.
       chatSend.classList.remove('active-send');
     }
 
-    chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); send(); } });
-    chatSend.addEventListener('click', send);
-    chatInput.addEventListener('input', () => {
-      chatSend.classList.toggle('active-send', chatInput.value.trim().length > 0);
-    });
-  </script>
-
-</body>
-</html>
+    chatInput.addEventListener('keyd
