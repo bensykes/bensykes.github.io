@@ -366,7 +366,7 @@ Features: Real-Time WPM, Accuracy Tracking, Daily Challenges, Visual Feedback.
     function addMsg(role, text) {
       const d = document.createElement('div');
       d.className = 'chat-msg';
-      const lbl = role === 'user' ? 'You' : "Jeremy's AI";
+      const lbl = role === 'user' ? 'You' : "Ben's AI Assistant";
       const lCls = role === 'user' ? 'user' : 'ai';
       const bCls = role === 'user' ? 'chat-msg-body user-body' : 'chat-msg-body';
       d.innerHTML = '<div class="chat-msg-label ' + lCls + '">' + lbl + '</div><div class="' + bCls + '">' + fmt(text) + '</div>';
