@@ -382,4 +382,12 @@ Features: Real-Time WPM, Accuracy Tracking, Daily Challenges, Visual Feedback.
       chatSend.classList.remove('active-send');
     }
 
-    chatInput.addEventListener('keyd
+    chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); send(); } });
+    chatSend.addEventListener('click', send);
+    chatInput.addEventListener('input', () => {
+      chatSend.classList.toggle('active-send', chatInput.value.trim().length > 0);
+    });
+  </script>
+
+</body>
+</html>
